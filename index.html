@@ -1,87 +1,209 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Mutant Code: Web Studio</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/x-icon" ref="/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" ref="/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nikita Tsyhanenko - Fullstack Web Developer</title>
+    <meta name="description" content="Hi, my name is Nikita and I'm a fullstack web developer">
+
+    <!--
+    * responsiveness
+    * minify styles and scripts for production
+    * showcase section
+    * avatar 256x256
+    -->
+
     <style>
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 200;
+            src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGIAPdqzPmKFFIYQ-46z3JxY.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCP2LEk6lMzYsRqr3dHFImA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
         html, body {
             width: 100%;
-        }
-        
-        .bgvideo {
-            position: fixed; 
-            right: 0; 
-            bottom: 0;
-
-            min-width: 100%; 
-            min-height: 100%;
-
-            width: auto; 
-            height: auto; 
-            z-index: -100;
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
 
-        .bglayout {
-            position: fixed; 
-            right: 0; 
-            bottom: 0;
-
-            display: table;
-
-            min-width: 100%; 
-            min-height: 100%;
-			
-			width: 100%;
-			height: 100%;
-
-            background: #000000;
-            background: rgba(0, 0, 0, 0.9);
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
         }
 
-        .bglayout .text-wrap {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .bglayout .text, .bglayout .text-sub {
+        body:before {
+            content: '';
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            z-index: 0;
+            -moz-pointer-events: none;
+            -webkit-pointer-events: none;
+            -ms-pointer-events: none;
+            pointer-events: none;
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            background-image: linear-gradient(45deg, #503157 33%, #045359 100%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            background-color: #FFFFFF;
+        }
 
-            text-transform: uppercase;
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 320px;
+
             text-align: center;
 
-            color: white;
-
-            font-size: 3em;
-            font-family: 'Roboto', sans-serif;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
 
-        .bglayout .text-sub {
-            font-size: 1em;
+        .portrait__container {
+            width: 128px;
+            height: 128px;
+            margin: 0 auto;
+
+            border-radius: 64px;
+            overflow: hidden;
+        }
+
+        .portrait__image {
+            width: 100%;
+        }
+
+        .title {
+            margin: 24px 0 16px;
+
+            font-size: 40px;
+            font-weight: 200;
+            text-transform: uppercase;
+            color: #18E3F3;
+        }
+
+        .subtitle {
+            color: #fff;
+
+            display: none;
+        }
+
+        .social__button {
+            display: inline-block;
+            width: 90px;
+            height: 38px;
+            line-height: 38px;
+            margin: 0 4px;
+
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+
+            border: 1px solid #fff;
+            border-radius: 3px;
+        }
+
+        .social__button:hover {
+            color: #18E3F3;
+            border-color: #18E3F3;
+        }
+
+        .contact {
+            display: inline-block;
+            margin-top: 32px;
+
+            font-weight: 300;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (min-width: 350px) {
+            .content {
+                width: 330px;
+            }
+
+            .contact {
+                margin-top: 16px;
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 48px;
+            }
         }
     </style>
 </head>
 <body>
-<video autoplay loop class="bgvideo">
-    <source src="360.mp4" type="video/mp4">
-</video>
-
-<div class="bglayout">
-    <div class="text-wrap">
-        <div class="text">we under construction</div>
-        <div class="text-sub">please stand by</div>
+<div class="content">
+    <div class="portrait__container">
+        <img class="portrait__image" src="images/avatar.jpeg" alt="Nikita Tsyhanenko @ Mutantcode">
     </div>
+
+    <div class="title">
+        Web developer
+    </div>
+
+
+    <!--
+    <div class="subtitle">
+        Hi, my name is Nikita and I'm a fullstack web developer. I'm have experience in both building complex SPA and implementing lightweight mobile-friendly landings. Each project for me is another chance to prove my skills and challenge myself. As a fullstack developer, I working on bleeding edge of web technologies to find best solutions in this area.
+    </div>
+    -->
+
+    <div class="social">
+        <a class="social__button" target="_blank" href="https://www.upwork.com/freelancers/~015ae186614a012565">Upwork</a>
+        <a class="social__button" target="_blank" href="https://github.com/accetone">Github</a>
+        <a id="showcaseButton" class="social__button" target="_blank" href="https://www.upwork.com/freelancers/~015ae186614a012565">Showcase</a>
+    </div>
+
+    <a class="contact" href="mailto:nikitatsyhanenko@gmail.com">
+        nikitatsyhanenko@gmail.com
+    </a>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a, m);
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-62450305-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script>
+        var showcaseButton = document.getElementById();
+    </script>
 </div>
-
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a, m);
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-62450305-1', 'auto');
-    ga('send', 'pageview');
-</script>
 </body>
 </html>
