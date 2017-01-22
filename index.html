@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Mutant Code: Web Studio</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" ref="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" ref="/favicon.png">
+    <style>
+        html, body {
+            width: 100%;
+        }
+        
+        .bgvideo {
+            position: fixed; 
+            right: 0; 
+            bottom: 0;
+
+            min-width: 100%; 
+            min-height: 100%;
+
+            width: auto; 
+            height: auto; 
+            z-index: -100;
+        }
+
+        .bglayout {
+            position: fixed; 
+            right: 0; 
+            bottom: 0;
+
+            display: table;
+
+            min-width: 100%; 
+            min-height: 100%;
+			
+			width: 100%;
+			height: 100%;
+
+            background: #000000;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .bglayout .text-wrap {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .bglayout .text, .bglayout .text-sub {
+            width: 100%;
+
+            text-transform: uppercase;
+            text-align: center;
+
+            color: white;
+
+            font-size: 3em;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .bglayout .text-sub {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+<video autoplay loop class="bgvideo">
+    <source src="360.mp4" type="video/mp4">
+</video>
+
+<div class="bglayout">
+    <div class="text-wrap">
+        <div class="text">we under construction</div>
+        <div class="text-sub">please stand by</div>
+    </div>
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a, m);
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62450305-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
