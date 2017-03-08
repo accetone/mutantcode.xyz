@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nikita Tsyhanenko - Fullstack Web Developer</title>
+    <meta name="description" content="Hi, my name is Nikita and I'm a fullstack web developer">
+
+    <style>
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 200;
+            src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGIAPdqzPmKFFIYQ-46z3JxY.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCP2LEk6lMzYsRqr3dHFImA.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        body:before {
+            content: '';
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            -moz-pointer-events: none;
+            -webkit-pointer-events: none;
+            -ms-pointer-events: none;
+            pointer-events: none;
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            background-image: linear-gradient(45deg, #503157 33%, #045359 100%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            background-color: #FFFFFF;
+        }
+
+        .nav {
+            position: relative;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .nav__item {
+            color: #fff;
+            display: inline-block;
+            width: 90px;
+            height: 38px;
+            line-height: 38px;
+            margin: 0 4px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        .nav__item:hover {
+            color: #18E3F3;
+            border-color: #18E3F3;
+        }
+
+        .showcase {
+            position: relative;
+            max-width: 600px;
+            width: 90%;
+            margin: 24px auto;
+        }
+
+        .showcase__item {
+            width: 100%;
+            background: #fff;
+            border-radius: 4px;
+            margin-bottom: 32px;
+        }
+
+        .showcase__thumbnail {
+            width: 100%;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .showcase__title {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 16px 24px 12px;
+        }
+
+        .showcase__ref {
+            font-size: 14px;
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+
+        .showcase__ref:hover {
+            color: #18E3F3;
+        }
+
+        .showcase__description {
+            padding: 0 24px 20px;
+        }
+
+        @media(min-width: 600px) {
+            .showcase {
+                margin: 48px auto 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a class="nav__item" target="_blank" href="https://www.upwork.com/freelancers/~015ae186614a012565">Upwork</a>
+    <a class="nav__item" target="_blank" href="https://github.com/accetone">Github</a>
+    <a class="nav__item" href="mailto:nikitatsyhanenko@gmail.com">Contact</a>
+</div>
+
+<div class="showcase">
+    <div class="showcase__item showcase__item_hidden">
+        <img class="showcase__thumbnail" src="images/cabinet-guy.png">
+
+        <div class="showcase__title">
+            Cabinet Guy
+
+            <a href="http://cabinet-guy.fr/public/" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            The goal was to promote services of the client through developing of mobile-friendly responsive landing page for lawyers company.
+            <br><br>
+            We used Avocode and Github with continuous integration to maximally involve the client in the development process.
+        </div>
+    </div>
+
+    <div class="showcase__item">
+        <img class="showcase__thumbnail" src="images/brikster.png">
+
+        <div class="showcase__title">
+            Brickster
+
+            <a href="https://mutantcode.xyz/works/brickster/" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            Developed responsive mobile-friendly  landing page for prototype of builders aggregation service.
+            <br><br>
+            Optimized for mobile, tablet and desktop.
+            <br><br>
+            Configured GA to collect analytics about users screen size and behavior data (scrolling & idling info, buttons clicks and form events).
+        </div>
+    </div>
+
+    <div class="showcase__item">
+        <img class="showcase__thumbnail" src="images/eio.png">
+
+        <div class="showcase__title">
+            EIO Coalition
+
+            <a href="http://www.eiocoalition.org/" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            EIO is a collaborative of advocates helps prisoners with getting higher education.
+            <br><br>
+            In this project I implemented fully responsive, mobile-friendly layout for EIO Coalition web site.
+        </div>
+    </div>
+
+    <div class="showcase__item showcase__item_hidden">
+        <img class="showcase__thumbnail" src="images/mobile-insight.png">
+
+        <div class="showcase__title">
+            Mobile Insight
+
+            <a href="http://mobile-insightinc.com/" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            Developed new functionality and fixed bugs for vehicle GPS tracking system. This system provide service for transport companies.
+            <br><br>
+            Key features: real-time view of vehicle move, movement status (moving, idling, stopped and etc.), movement distance, movement animation, maintenance alerts, location alerts, and many various reports.
+        </div>
+    </div>
+
+    <div class="showcase__item">
+        <img class="showcase__thumbnail" src="images/stefanka.png">
+
+        <div class="showcase__title">
+            Stefanka
+
+            <a href="https://stefanka.tech" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            We developed web application for service that provide retailers with a technological solution to recommend clothing that is perfectly fitted to each client’s unique body shape.
+        </div>
+    </div>
+
+    <div class="showcase__item">
+        <img class="showcase__thumbnail" src="images/careleaves.png">
+
+        <div class="showcase__title">
+            Stefanka
+
+            <a href="http://www.careleaves.fr/" target="_blank" class="showcase__ref">See it</a>
+        </div>
+
+        <div class="showcase__description">
+            Implemented landing for "Careleaves" product from PSD files.
+            <br><br>
+            Home page is responsive and mobile-friendly. Many custom sliders.
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a, m);
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62450305-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
